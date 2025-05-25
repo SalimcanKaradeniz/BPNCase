@@ -65,6 +65,7 @@ namespace ECommercePaymentApi.Controllers
 
         /// <summary>
         /// Ön sipariþi tamamlayýp sipariþi oluþturan api ucudur.
+        /// id deðeri olarak oluþan sipariþ kayýtýna ait id deðeri gönderilmelidir.
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
