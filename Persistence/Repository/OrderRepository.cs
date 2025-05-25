@@ -59,7 +59,7 @@ namespace Persistence.Repository
 
         public async Task<Order?> GetOrderByIdAsync(long orderId)
         {
-            return await _dbContext.Orders.Include(i => i.Items).AsNoTracking().FirstOrDefaultAsync(x => x.Id == orderId);
+            return await _dbContext.Orders.Include(i => i.Items).ThenInclude(p => p.Product).AsNoTracking().FirstOrDefaultAsync(x => x.Id == orderId);
         }
 
         public async Task<Order> UpdateAsync(Order order)
